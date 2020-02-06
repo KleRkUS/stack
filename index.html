@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>STACKS SCORE</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link href="https://fonts.googleapis.com/css?family=Play|Roboto&display=swap" rel="stylesheet">
+
+
+	<link href="libs/formstyler/dist/jquery.formstyler.css" rel="stylesheet" />
+	<link href="libs/formstyler/dist/jquery.formstyler.theme.css" rel="stylesheet" />
+	<link href="libs/range/rangeslider.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/main.min.css">
+	
+
+</head>
+<body>
+	<div class="burger__menu">
+		<a href="#" class="burger__menu_btn">
+			<span class="burger__menu_lines"></span>
+		</a>
+
+		<nav class="burger__menu_nav">
+			<a href="#about" class="burger__menu_link">О нас</a>
+			<a href="#order" class="burger__menu_link">Оформить заявку</a>
+			<a href="#services" class="burger__menu_link">Наши услуги</a>
+			<a href="#partners" class="burger__menu_link">Наши партнеры</a>
+			<a href="#faq" class="burger__menu_link">FAQ</a>
+			<a href="#footer" class="burger__menu_link">Связаться с нами</a>
+		</nav>
+
+		<div class="burger__menu_overlay"></div>
+	</div>
+	
+	<header>
+		<div class="header__logo">
+			<img src="img/logo.svg" alt="">
+		</div>
+		<div class="header__nav">
+			<div class="nav">
+				<div class="item">
+					<a href="#about">О НАС</a>
+				</div>
+				<div class="item">
+					<a href="#order">ОФОРМИТЬ ЗАЯВКУ</a>
+				</div>
+				<div class="item">
+					<a href="#services">НАШИ УСЛУГИ</a>
+				</div>
+				<div class="item">
+					<a href="#partners">НАШИ ПАРТНЕРЫ</a>
+				</div>
+				<div class="item">
+					<a href="#faq">FAQ</a>
+				</div>
+				<div class="item">
+					<a href="#footer">СВЯЗАТЬСЯ С НАМИ</a>
+				</div>
+			</div>	
+		</div>
+		<div class="item item__language">
+			<label class="lang__btn" for="check">
+				RUS
+			</label>
+
+			<input class="qwe123" id="check" type="checkbox">
+
+			<div class="land__langs">
+				<a href="#" class="current__lang">
+					ENG
+				</a>
+				<a href="#">
+					CHN
+				</a>
+			</div>
+	    </div>
+
+	</header>
+
+	<section class="header__main">
+		<div class="background">
+			<video autoplay="autoplay" muted="muted" loop="loop" class="video" src="video/header-bg.mp4">
+			</video>
+			
+		</div>
+		<div class="main">
+				<div class="main__title">
+					<h1>
+						ТОП команды под ключ
+					</h1>
+					<h2>
+						собираем профессиональные киберспортивные команды под ключ
+					</h2>
+				</div>
+				<!-- <div class="main__btn">
+					<a href="#order" class="btn">
+						ОСТАВИТЬ ЗАЯВКУ
+					</a>
+				</div> -->
+
+				<div class="numbers">
+					<div class="section">
+						<span class="timer count-title count-number" data-from="34" data-to="64" data-speed="70000"><p>+</p></span>
+						<div class="label"><p>ПОДПИСАННЫХ ИГРОКОВ</p></div>
+						
+					</div>
+					<div class="section">
+						<div class="number"><span>12</span></div>
+						<div class="label"><p>аналитиков</p></div>
+						
+					</div>
+					<div class="section">
+						<span class="timer count-title count-number" data-from="4" data-to="24" data-speed="800000"></span>
+						<div class="label"><p>собранных команд</p></div>
+						
+					</div>
+					<div class="section">
+						<div class="number"><span>6000+</span></div>
+						<div class="label"><p>средний ммр игрока</p></div>
+						
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section class="whous" id="about">
+		<div class="whous__title title">
+			<h1>Кто мы такие?</h1>
+			<h2>Кто мы такие?</h2>
+		</div>
+		<video autoplay="autoplay" muted="muted" controls="controls" controlslist="nodownload" class="video" src="/video/presentation.mp4" type="video/mp4"></video>
+	</section>
+		
+	<section class="order" id="order">
+		<div class="order__title title">
+			<h1>Оформить заявку</h1>
+			<h2>Оформить заявку</h2>
+		</div>
+		<div class="connect__tabs-container">
+			<div class="connect__tab">
+				<button class="connect__tablinks" onclick="openTab(event, 'link_1')" id="defaultOpen">команда под ключ</button>
+				<button class="connect__tablinks" onclick="openTab(event, 'link_2')">юридическое сопровождение</button>
+				<button class="connect__tablinks" onclick="openTab(event, 'link_3')">услуги скаутинга</button>
+			</div>
+			<!-- Tab content -->
+			<div id="link_1" class="connect__tabcontent tabcontent_1">
+				<div class="hidden">
+					<form id="form" class="form form_style main__form" >
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="STACKSSCORE">
+						<input type="hidden" name="admin_email" value="info@stacksscore.com">
+						<input type="hidden" name="form_subject" value="Заявка с сайта STACKS SCORE">
+
+						<!-- END Hidden Required Fields -->
+						<div class="form__container">
+							<div class="form__wrapp">
+								<div class="form__left_side">
+									<label class="form__title">
+										<h1>Каков ваш бюджет?</h1>
+										<div class="slideContainer">
+											<input name="Бюджет($):" type="range" min="0" max="100000" step="1000" value="10000" id="myRange" class="slider">
+											<p><span id="value"></span>$</p>
+										</div>
+									</label>
+									
+									<label class="form__title form__title_line"> 
+										<h1>Выберите дисциплину</h1> 
+										<div class="switch-field">
+											<input type="radio" id="radio-one-dota" name="Дисциплина" value="DOTA 2" required/>
+											<label class="label__yes label__dota" for="radio-one-dota">
+												DOTA 2
+											</label>
+											<input type="radio" id="radio-two-cs" name="Дисциплина" value="CS:GO" required/>
+											<label class="label__no label__cs" for="radio-two-cs">
+												CS:GO
+											</label>
+										</div> 
+									</label>
+								</div>
+								<div class="form__right_side">
+									<label class="form__title form__title_right">
+										<h1>Как с вами связаться?</h1>
+										<select type="text" name="Как с вами связаться?:" class="form-1_select">
+											<option class="option form__telegram" type="text" name="Компания:" value="Telegram" selected>Telegram</option>
+											<option class="option form__discord" type="text" name="Компания:" value="Discord">Discord</option>
+											<option class="option form__whatsapp" type="text" name="Компания:" value="Whatsapp">Whatsapp</option>
+											<option class="option form__teamspeak" type="text" name="Компания:" value="Teamspeak">Teamspeak</option>
+											<option class="option form__email" type="text" name="Компания:" value="Email">Email</option>
+											<option class="option form__phone" type="text" name="Компания:" value="Позвонить">Позвонить</option>
+										</select>
+									</label>
+									<label class="form__input">
+										<input id="connect-login" name="Информация для связи:" type="text" placeholder="@yourlogin" required > 
+									</label>
+									<div class="form__rihgt_bottom">
+										<div class="form__rihgt_bottom-top">
+											<label class="form__input form__input_short">
+												<input id="connect-login" name="Имя:" type="text" placeholder="Твое Имя" required > 
+											</label>
+											<label class="form__input form__input_short form__input_short_margin">
+												<h3>* Обязательно для игроков</h3>
+												<input id="connect-login" name="Ссылка на профиль Steam:" type="text" placeholder="Ссылка на профиль Steam" > 
+											</label>
+										</div>
+										<label class="form__input form__input_bottom">
+											<input id="connect-login" name="Email:" type="text" placeholder="Email" required > 
+											<h3>* Анкеты игроков, у которых не будет ссылки на профиль Steam рассматриваться не будут!</h3>
+										</label>
+									</div>
+								</div>
+								
+							</div>
+							<button class="main-btn button">Отправить</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+
+			<div id="link_2" class="connect__tabcontent">
+				<div class="hidden">
+					<form id="form" class="form form_style main__form" >
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="STACKSSCORE">
+						<input type="hidden" name="admin_email" value="info@stacksscore.com">
+						<input type="hidden" name="form_subject" value="Заявка на Юридическое сопровождение">
+						<!-- END Hidden Required Fields -->
+						<div class="form__container">
+							<div class="form__wrapp">
+								<div class="form__left_side">
+									<label class="form__title">
+										<h1>Вы?</h1>
+										<select type="text" name="Кто вы?:" class="form-1_select" required="">
+											<option class="option" type="text" name="Компания:" value="Игрок" selected>Игрок</option>
+											<option class="option" type="text" name="Компания:" value="Организация">Организация</option>
+											<option class="option" type="text" name="Компания:" value="Тренер">Тренер</option>
+											<option class="option" type="text" name="Компания:" value="Менеджер">Менеджер</option>
+											<option class="option" type="text" name="Компания:" value="Другое">Другое</option>
+										</select>
+									</label>
+									
+									<label class="form__title form__title_line"> 
+										<h1>Хотите получить бесплатную консультацию?</h1> 
+										<div class="switch-field">
+											<input type="radio" id="radio-one" name="Бесплатная консультация:" value="Да" required/>
+											<label class="label__yes" for="radio-one">ДА</label>
+											<input type="radio" id="radio-two" name="Бесплатная консультация:" value="Нет" required/>
+											<label class="label__no" for="radio-two">НЕТ</label>
+										</div> 
+									</label>
+								</div>
+								<div class="form__right_side">
+									<label class="form__title form__title_right">
+										<h1>Как с вами связаться?</h1>
+										<select type="text" name="Как с вами связаться?:" class="form-1_select">
+											<option class="option form__telegram" type="text" name="Компания:" value="Telegram" selected>Telegram</option>
+											<option class="option form__discord" type="text" name="Компания:" value="Discord">Discord</option>
+											<option class="option form__whatsapp" type="text" name="Компания:" value="Whatsapp">Whatsapp</option>
+											<option class="option form__teamspeak" type="text" name="Компания:" value="Teamspeak">Teamspeak</option>
+											<option class="option form__email" type="text" name="Компания:" value="Email">Email</option>
+											<option class="option form__phone" type="text" name="Компания:" value="Позвонить">Позвонить</option>
+										</select>
+									</label>
+									<label class="form__input">
+										<input id="connect-login" name="Информация для связи:" type="text" placeholder="@yourlogin" required="" > 
+									</label>
+									<div class="form__rihgt_bottom">
+										<div class="form__rihgt_bottom-top">
+											<label class="form__input form__input_short">
+												<input id="connect-login" name="Имя:" type="text" placeholder="Твое Имя" required="" > 
+											</label>
+											<label class="form__input form__input_short form__input_short_margin">
+												<h3>* Обязательно для игроков</h3>
+												<input id="connect-login" name="Ссылка на профиль Steam:" type="text" placeholder="Ссылка на профиль Steam"> 
+											</label>
+										</div>
+										<label class="form__input form__input_bottom">
+											<input id="connect-login" name="Email:" type="text" placeholder="Email" required="" > 
+											<h3>* Анкеты игроков, у которых не будет ссылки на профиль Steam рассматриваться не будут!</h3>
+										</label>
+									</div>
+								</div>
+								
+							</div>
+							<button class="main-btn button">Отправить</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+
+			<div id="link_3" class="connect__tabcontent">
+				<div class="hidden">
+					<form id="form" class="form form_style main__form" >
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="STACKSSCORE">
+						<input type="hidden" name="admin_email" value="info@stacksscore.com">
+						<input type="hidden" name="form_subject" value="Заявка на Услуги скаутинга">
+						<!-- END Hidden Required Fields -->
+						<div class="form__container">
+							<div class="form__wrapp">
+								<div class="form__left_side">
+									<label class="form__title">
+										<h1>Кто вы?</h1>
+										<select type="text" name="Кто вы?:" class="form-1_select" required="">
+											<option class="option" type="text" name="Компания:" value="Игрок" selected>Игрок</option>
+											<option class="option" type="text" name="Компания:" value="Игрок" selected>Аналитик</option>
+											<option class="option" type="text" name="Компания:" value="Организация">Организация</option>
+											<option class="option" type="text" name="Компания:" value="Тренер">Тренер</option>
+											<option class="option" type="text" name="Компания:" value="Менеджер">Менеджер</option>
+											<option class="option" type="text" name="Компания:" value="Другое">Другое</option>
+										</select>
+									</label>
+									
+									<label class="form__title">
+										<h1>Кого хотите найти?</h1>
+										<select type="text" name="Кого хотите найти?:" class="form-1_select" required="">
+											<option class="option" type="text" name="Компания:" value="Игрок" selected>Команду</option>
+											<option class="option" type="text" name="Компания:" value="Организация">Игрока</option>
+											<option class="option" type="text" name="Компания:" value="Тренер">Другое</option>
+										</select>
+									</label>
+
+									<label class="form__title form__border">
+										<h1>На какой позиции вы играете?</h1>
+										<select type="text" name="На какой позиции вы играете?:" class="form-1_select" required="">
+											<option class="option" type="text" name="Компания:" value="1" selected>1</option>
+											<option class="option" type="text" name="Компания:" value="2">2</option>
+											<option class="option" type="text" name="Компания:" value="3">3</option>
+											<option class="option" type="text" name="Компания:" value="4">4</option>
+											<option class="option" type="text" name="Компания:" value="5">5</option>
+										</select>
+									</label>
+								</div>
+								<div class="form__right_side">
+									<label class="form__title form__title_right">
+										<h1>Как с вами связаться?</h1>
+										<select type="text" name="Как с вами связаться?:" class="form-1_select">
+											<option class="option form__telegram" type="text" name="Компания:" value="Telegram" selected>Telegram</option>
+											<option class="option form__discord" type="text" name="Компания:" value="Discord">Discord</option>
+											<option class="option form__whatsapp" type="text" name="Компания:" value="Whatsapp">Whatsapp</option>
+											<option class="option form__teamspeak" type="text" name="Компания:" value="Teamspeak">Teamspeak</option>
+											<option class="option form__email" type="text" name="Компания:" value="Email">Email</option>
+											<option class="option form__phone" type="text" name="Компания:" value="Позвонить">Позвонить</option>
+										</select>
+									</label>
+									<label class="form__input">
+										<input id="connect-login" name="Информация для связи:" type="text" placeholder="@yourlogin" required="" > 
+									</label>
+									<div class="form__rihgt_bottom">
+										<div class="form__rihgt_bottom-top">
+											<label class="form__input form__input_short">
+												<input id="connect-login" name="Имя:" type="text" placeholder="Твое Имя" required="" > 
+											</label>
+											<label class="form__input form__input_short form__input_short_margin">
+												<h3>* Обязательно для игроков</h3>
+												<input id="connect-login" name="Ссылка на профиль Steam:" type="text" placeholder="Ссылка на профиль Steam"> 
+											</label>
+										</div>
+										<label class="form__input form__input_bottom">
+											<input id="connect-login" name="Email:" type="text" placeholder="Email" required="" > 
+											<h3>* Анкеты игроков, у которых не будет ссылки на профиль Steam рассматриваться не будут!</h3>
+										</label>
+									</div>
+								</div>
+								
+							</div>
+							<button class="main-btn button">Отправить</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="services" id="services">
+		<img src="img/uslugi.png" class="services__bg" alt="">
+		<div class="services__title title">
+			<h1>Наши услуги</h1>
+			<h2>Наши услуги</h2>
+		</div>
+		<div class="questions__wrapp">
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p class="tablinks-1">Киберспортивная команда под ключ</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <ul class="tab__list">
+						<li class="list__items list__items-1">
+							<p>Подбираем тренера и менеджера</p>
+						</li>
+						<li class="list__items list__items-2">
+							<p>Даем план развития команды на год</p>
+						</li>
+						<li class="list__items list__items-3">
+							<p>Собираем профессиональный состав</p>
+						</li>
+						<li class="list__items list__items-4">
+							<p>Составляем договор между компанией и игроками</p>
+						</li>
+						<!-- <li class="list__items list__items-5">
+							<img src="img/tab_1-5.svg" alt="">
+							<p>Подключение торговых терминалов</p>
+						</li> -->
+					</ul>
+				  </div>
+				</div>
+			</div>
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p class="tablinks-2">Киберспортивный скаутинг</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <ul class="tab__list">
+						<li class="list__items list__items-1">
+							<p>Подбираем про игроков для команд</p>
+						</li>
+						<li class="list__items list__items-2">
+							<p>И команды для про игроков</p>
+						</li>
+						<li class="list__items list__items-3">
+							<p>Сопровождаем трансферы</p>
+						</li>
+						<li class="list__items list__items-4">
+							<p>Привлекаем спонсоров</p>
+						</li>
+					</ul> 
+				  </div>
+				</div>
+			</div>
+				
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p class="tablinks-3">Киберспортивный юрист</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <ul class="tab__list">
+						<li class="list__items list__items-1">
+							<p>Открытие киберспортивной организации под ключ</p>
+						</li>
+						<li class="list__items list__items-2">
+							<p>Составление договоров с игроками и командами</p>
+						</li>
+						<li class="list__items list__items-3">
+							<p>Консультации по Вашему договору</p>
+						</li>
+						<!-- <li class="list__items list__items-4">
+							<p>Открытие организаций под ключ</p>
+						</li> -->
+					</ul>
+				  </div>
+				</div>
+			</div>
+			<div class="services__btn">
+				<a href="#order" class="btn">
+					ОСТАВИТЬ ЗАЯВКУ
+				</a>
+			</div>
+		</div>
+		<div class="services__container">
+			<div class="services__wrapper">
+				<div class="tab">
+					<div class="tab__item tab__item-1">
+						<button id="defaultOpen_1" class="tablinks tablinks-1 active" onclick="openCity(event, 'tab_1')">Киберспортивная команда под ключ</button>
+						<div class="tab__line"></div>
+						<div class="line-1 tab__line_anim"></div>
+					</div>
+					<div class="tab__item tab__item-2">
+						<button class="tablinks tablinks-2" onclick="openCity(event, 'tab_2')">Киберспортивный скаутинг</button>
+						<div class="tab__line"></div>
+						<div class="line-2"></div>
+					</div>	
+					<div class="tab__item tab__item-3">
+						<button class="tablinks tablinks-3" onclick="openCity(event, 'tab_3')">Киберспортивный юрист</button>
+						<div class="tab__line"></div>
+						<div class="line-3"></div>
+					</div>
+				</div>
+				<!-- Tab content -->
+				<div id="tab_1" class="tabcontent tabcontent_1">
+					<ul class="tab__list">
+						<li class="list__items list__items-1">
+							<p>Подбираем тренера и менеджера</p>
+						</li>
+						<li class="list__items list__items-2">
+							<p>Даем план развития команды на год</p>
+						</li>
+						<li class="list__items list__items-3">
+							<p>Собираем профессиональный состав</p>
+						</li>
+						<li class="list__items list__items-4">
+							<p>Составляем договор между компанией и игроками</p>
+						</li>
+						<!-- <li class="list__items list__items-5">
+							<img src="img/tab_1-5.svg" alt="">
+							<p>Подключение торговых терминалов</p>
+						</li> -->
+					</ul>
+				</div>
+
+				<div id="tab_2" class="tabcontent">
+					<ul class="tab__list">
+						<li class="list__items list__items-1">
+							<p>Подбираем про игроков для команд</p>
+						</li>
+						<li class="list__items list__items-2">
+							<p>И команды для про игроков</p>
+						</li>
+						<li class="list__items list__items-3">
+							<p>Сопровождаем трансферы</p>
+						</li>
+						<li class="list__items list__items-4">
+							<p>Привлекаем спонсоров</p>
+						</li>
+					</ul> 
+				</div>
+
+				<div id="tab_3" class="tabcontent">
+					<ul class="tab__list">
+						<li class="list__items list__items-1">
+							<p>Открытие киберспортивной организации под ключ</p>
+						</li>
+						<li class="list__items list__items-2">
+							<p>Составление договоров с игроками и командами</p>
+						</li>
+						<li class="list__items list__items-3">
+							<p>Консультации по Вашему договору</p>
+						</li>
+						<!-- <li class="list__items list__items-4">
+							<p>Открытие организаций под ключ</p>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="services__btn">
+				<a href="#order" class="btn">
+					ОСТАВИТЬ ЗАЯВКУ
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="partners" id="partners">
+		<div class="partners__title title">
+			<h1>Наши партнеры</h1>
+			<h2>Наши партнеры</h2>
+		</div>
+		<div class="partners__wrapp partners__wrapp_display">
+			<div class="partners__wrapp_display">
+				<div class="partners__item">
+					<img src="img/logo-1.svg" alt="">
+					<p>Федерация <br> Киберспорта <br> Росии</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-2.svg" alt="">
+					<p>ESPN</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-3.svg" alt="">
+					<p>International</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-4.svg" alt="">
+					<p>DXRacer</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-5.svg" alt="">
+					<p>IESF</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-6.svg" alt="">
+					<p>Major</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-7.svg" alt="">
+					<p>MIPT</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-8.svg" alt="">
+					<p>MSU</p>
+				</div>
+			</div>
+				
+			<div class="services__btn">
+				<a href="#order" class="btn">
+					ОСТАВИТЬ ЗАЯВКУ
+				</a>
+			</div>
+		</div>
+		<div class="partners__wrapp">
+			<div class="wrapp-1">
+				<div class="partners__item">
+					<img src="img/logo-1.svg" alt="">
+					<p>Федерация <br> Киберспорта <br> Росии</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-2.svg" alt="">
+					<p>ESPN</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-3.svg" alt="">
+					<p>International</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-4.svg" alt="">
+					<p>DXRacer</p>
+				</div>
+			</div>
+			<div class="wrapp-2">
+				<div class="partners__item">
+					<img src="img/logo-5.svg" alt="">
+					<p>IESF</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-6.svg" alt="">
+					<p>Major</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-7.svg" alt="">
+					<p>MIPT</p>
+				</div>
+				<div class="partners__item">
+					<img src="img/logo-8.svg" alt="">
+					<p>MSU</p>
+				</div>
+			</div>
+			<div class="services__btn">
+				<a href="#order" class="btn">
+					ОСТАВИТЬ ЗАЯВКУ
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="questions" id="faq">
+		<img src="img/questions.png" class="services__bg" alt="">
+		<div class="questions__title title">
+			<h1>Часто задаваемые вопросы</h1>
+			<h2>FAQ</h2>
+		</div>
+		<div class="questions__wrapp">
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p>Сколько в среднем занимает процесс отбора?</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <p>На днях особо везучие журналисты в течение трёх часов изучали два уровня The Last of Us Part II. К чёрту лишние предисловия — давайте разбираться, чем Нил Дракманн (Neil Druckmann) и компания удивили акул пера!
+					<br><br>
+					«Ещё никогда виртуальное убийство не казалось таким ужасным» — это суждение вынесено в заголовок превью от VG247. Как пишет автор, в одном из эпизодов он застрелил из лука мужчину. Собака начала скулить над трупом хозяина, а потом подоспел один из его товарищей погибшего и выкрикнул его имя. Так журналист узнал, что убитого звали Шон. 
+					<br><br>
+					Интересная деталь — имя того или иного недруга определяется при его первом появлении на уровне, а не в ходе переговоров между NPC. Это означает, что, если вы загрузите последнее сохранение, тот самый Шон останется Шоном. Таким образом разработчики хотят сохранить иллюзию, будто Элли сражается с живыми людьми, а не с ботами.</p>
+				  </div>
+				</div>
+			</div>
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p>Как понять достойно ли я играю?</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <p>На днях особо везучие журналисты в течение трёх часов изучали два уровня The Last of Us Part II. К чёрту лишние предисловия — давайте разбираться, чем Нил Дракманн (Neil Druckmann) и компания удивили акул пера!
+					<br><br>
+					«Ещё никогда виртуальное убийство не казалось таким ужасным» — это суждение вынесено в заголовок превью от VG247. Как пишет автор, в одном из эпизодов он застрелил из лука мужчину. Собака начала скулить над трупом хозяина, а потом подоспел один из его товарищей погибшего и выкрикнул его имя. Так журналист узнал, что убитого звали Шон. 
+					<br><br>
+					Интересная деталь — имя того или иного недруга определяется при его первом появлении на уровне, а не в ходе переговоров между NPC. Это означает, что, если вы загрузите последнее сохранение, тот самый Шон останется Шоном. Таким образом разработчики хотят сохранить иллюзию, будто Элли сражается с живыми людьми, а не с ботами.</p>
+				  </div>
+				</div>
+			</div>
+				
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p>Что мне делать после того как меня выберут?</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <p>На днях особо везучие журналисты в течение трёх часов изучали два уровня The Last of Us Part II. К чёрту лишние предисловия — давайте разбираться, чем Нил Дракманн (Neil Druckmann) и компания удивили акул пера!
+					<br><br>
+					«Ещё никогда виртуальное убийство не казалось таким ужасным» — это суждение вынесено в заголовок превью от VG247. Как пишет автор, в одном из эпизодов он застрелил из лука мужчину. Собака начала скулить над трупом хозяина, а потом подоспел один из его товарищей погибшего и выкрикнул его имя. Так журналист узнал, что убитого звали Шон. 
+					<br><br>
+					Интересная деталь — имя того или иного недруга определяется при его первом появлении на уровне, а не в ходе переговоров между NPC. Это означает, что, если вы загрузите последнее сохранение, тот самый Шон останется Шоном. Таким образом разработчики хотят сохранить иллюзию, будто Элли сражается с живыми людьми, а не с ботами.</p>
+				  </div>
+				</div>
+			</div>
+				
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p>Вы занимаетесь обучением игроков?</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <p>На днях особо везучие журналисты в течение трёх часов изучали два уровня The Last of Us Part II. К чёрту лишние предисловия — давайте разбираться, чем Нил Дракманн (Neil Druckmann) и компания удивили акул пера!
+					<br><br>
+					«Ещё никогда виртуальное убийство не казалось таким ужасным» — это суждение вынесено в заголовок превью от VG247. Как пишет автор, в одном из эпизодов он застрелил из лука мужчину. Собака начала скулить над трупом хозяина, а потом подоспел один из его товарищей погибшего и выкрикнул его имя. Так журналист узнал, что убитого звали Шон. 
+					<br><br>
+					Интересная деталь — имя того или иного недруга определяется при его первом появлении на уровне, а не в ходе переговоров между NPC. Это означает, что, если вы загрузите последнее сохранение, тот самый Шон останется Шоном. Таким образом разработчики хотят сохранить иллюзию, будто Элли сражается с живыми людьми, а не с ботами.</p>
+				  </div>
+				</div>
+			</div>
+				
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p>Мне нет 18 лет. Есть ли смысл оставлять заявку?</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <p>На днях особо везучие журналисты в течение трёх часов изучали два уровня The Last of Us Part II. К чёрту лишние предисловия — давайте разбираться, чем Нил Дракманн (Neil Druckmann) и компания удивили акул пера!
+					<br><br>
+					«Ещё никогда виртуальное убийство не казалось таким ужасным» — это суждение вынесено в заголовок превью от VG247. Как пишет автор, в одном из эпизодов он застрелил из лука мужчину. Собака начала скулить над трупом хозяина, а потом подоспел один из его товарищей погибшего и выкрикнул его имя. Так журналист узнал, что убитого звали Шон. 
+					<br><br>
+					Интересная деталь — имя того или иного недруга определяется при его первом появлении на уровне, а не в ходе переговоров между NPC. Это означает, что, если вы загрузите последнее сохранение, тот самый Шон останется Шоном. Таким образом разработчики хотят сохранить иллюзию, будто Элли сражается с живыми людьми, а не с ботами.</p>
+				  </div>
+				</div>
+			</div>
+				
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p>Какой должен быть минимальный ММР чтобы меня рассмотрели?</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <p>На днях особо везучие журналисты в течение трёх часов изучали два уровня The Last of Us Part II. К чёрту лишние предисловия — давайте разбираться, чем Нил Дракманн (Neil Druckmann) и компания удивили акул пера!
+					<br><br>
+					«Ещё никогда виртуальное убийство не казалось таким ужасным» — это суждение вынесено в заголовок превью от VG247. Как пишет автор, в одном из эпизодов он застрелил из лука мужчину. Собака начала скулить над трупом хозяина, а потом подоспел один из его товарищей погибшего и выкрикнул его имя. Так журналист узнал, что убитого звали Шон. 
+					<br><br>
+					Интересная деталь — имя того или иного недруга определяется при его первом появлении на уровне, а не в ходе переговоров между NPC. Это означает, что, если вы загрузите последнее сохранение, тот самый Шон останется Шоном. Таким образом разработчики хотят сохранить иллюзию, будто Элли сражается с живыми людьми, а не с ботами.</p>
+				  </div>
+				</div>
+			</div>	
+
+			<div class="question__item">
+				<div class="dropdown drpdw">
+				  <button class="question__btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <p>Я живу не в России, работаете ли вы с иностранными игроками?</p>
+				  </button>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				    <p>На днях особо везучие журналисты в течение трёх часов изучали два уровня The Last of Us Part II. К чёрту лишние предисловия — давайте разбираться, чем Нил Дракманн (Neil Druckmann) и компания удивили акул пера!
+					<br><br>
+					«Ещё никогда виртуальное убийство не казалось таким ужасным» — это суждение вынесено в заголовок превью от VG247. Как пишет автор, в одном из эпизодов он застрелил из лука мужчину. Собака начала скулить над трупом хозяина, а потом подоспел один из его товарищей погибшего и выкрикнул его имя. Так журналист узнал, что убитого звали Шон. 
+					<br><br>
+					Интересная деталь — имя того или иного недруга определяется при его первом появлении на уровне, а не в ходе переговоров между NPC. Это означает, что, если вы загрузите последнее сохранение, тот самый Шон останется Шоном. Таким образом разработчики хотят сохранить иллюзию, будто Элли сражается с живыми людьми, а не с ботами.</p>
+				  </div>
+				</div>
+			</div>
+			<div class="services__btn">
+				<a href="#order" class="btn">
+					ОСТАВИТЬ ЗАЯВКУ
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer">
+		<div class="footer__wrapper">
+			<div class="footer__left">
+				<img src="img/logo.svg" alt="">
+				<p>
+					© 2019 STACKSSCORE. All rights reserved.
+				</p>
+			</div>
+			<div class="footer__right">
+				<div class="footer__media">
+					<a href="#"><img src="img/vk.svg" alt=""></a>
+					<a href="#"><img src="img/facebook.svg" alt=""></a>
+					<a href="#"><img src="img/footer-t.svg" alt=""></a>
+				</div>
+				<p>info@stacksscore.com</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+
+</body>
+</html>

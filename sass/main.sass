@@ -1,0 +1,1327 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	padding: 0
+	margin: 0
+	color: #fff
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: #0a101f
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+div, span, a, button, form, p 
+	box-sizing: border-box
+
+
+h1, h2, h3, h4, h5, h6 
+	box-sizing: border-box
+	font-weight: bold
+	margin: 0
+
+textarea:focus, input:focus, button:focus 
+    outline: none
+
+
+ul, li 
+	display: block
+	margin: 0
+	padding: 0
+
+p 
+	margin: 0
+
+a 
+	text-decoration: none
+	position: relative
+	color: #000
+
+a:hover 
+	text-decoration: none
+
+
+* 
+	transition: all ease 0.3s
+	outline: 0 !important
+
+// MAIN WORK
+.burger__menu
+	display: none
+.burger__menu_btn
+	position: fixed
+	letter-spacing: 10px
+	z-index: 30
+	width: 65px
+	top: 15px
+	left: 15px
+	border-radius: 50%	
+	height: 65px
+	background-color: #0a101f
+.burger__menu_lines,
+.burger__menu_lines::after,
+.burger__menu_lines::before
+	position: absolute
+	width: 30px
+	height: 3px
+	border-radius: 5px
+	background-color: #fff
+.burger__menu_lines
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+.burger__menu_lines::before
+	content: ''
+	top: -10px
+.burger__menu_lines::after
+	content: ''
+	top: 10px
+.burger__menu_active .burger__menu_lines
+	background-color: transparent	
+.burger__menu_active .burger__menu_lines::before
+	top: 0
+	transform: rotate(45deg)
+.burger__menu_active .burger__menu_lines::after
+	top: 0	
+	transform: rotate(-45deg)
+
+.burger__menu_nav
+	padding-top: 180px
+	position: fixed
+	z-index: 20
+	display: flex
+	flex-flow: column
+	height: 100%
+	background-color: #0a101f
+	overflow-y: auto
+	left: -100%
+.burger__menu_active .burger__menu_nav
+	left: 0
+
+.burger__menu_link
+	padding: 25px
+	padding-left: 55px
+	padding-right: 55px	
+	font-family: Geometria
+	font-style: normal
+	font-weight: bold
+	font-size: 25px
+	color: #fff
+.burger__menu_link:hover
+	filter: brightness(0.7)	
+
+.burger__menu_overlay	
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	z-index: 10
+.burger__menu_active .burger__menu_overlay
+	display: block
+	background-color: rgba(0,0,0,0.5)	
+
+
+header 
+	margin-top: 10px
+	display: flex
+	-ms-flex-pack: distribute
+	justify-content: space-around
+	-ms-flex-align: center
+	align-items: center
+	width: 100%
+	margin-bottom: 20px
+	box-sizing: border-box
+	max-width: 1220px
+	position: absolute
+	top: 20px
+	left: 50%
+	transform: translateX(-50%)
+	z-index: 100
+	.header__logo
+
+	.header__nav
+		.nav 
+			.item
+				margin-right: 30px 
+				a
+					font-family: Roboto
+					font-style: normal
+					font-weight: bold
+					font-size: 14px
+					line-height: 16px
+					display: flex
+					align-items: center
+					color: #D0D8E7
+					&:hover 
+						color: #fff
+
+.header__main
+	width: 100%
+	min-width: 1200px
+	min-height: 600px
+	height: 100vh
+	// background: #292a2e 50% no-repeat url(/static/img/video-preview.d4d1cf8.jpg)
+	background-size: cover
+	position: relative
+	.background
+		width: 100%
+		height: 100%
+		overflow: hidden
+		position: absolute
+		// z-index: -1
+		background: rgba(0,0,0,0.5)
+		.video 
+			z-index: -1
+			width: auto
+			height: auto
+			min-width: 100%
+			min-height: 100%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+	.main 
+		z-index: 2
+		position: relative
+		width: auto
+		height: auto
+		min-width: 100%
+		min-height: 100%
+		display: flex
+		justify-content: space-evenly
+		align-items: center
+		flex-direction: column
+		.main__title
+			display: flex
+			flex-direction: column
+			align-items: center
+			h1 
+				font-family: Geometria
+				font-size: 60px
+				text-align: center
+				text-transform: uppercase
+				color: #fff
+				margin-bottom: 20px
+			h2 
+				color: #ffe793
+				font-family: Geometria
+				font-size: 21px
+				text-align: center
+				text-transform: uppercase
+				margin-bottom: 56px
+		.main__btn 	
+			width: 296px
+			height: 56px
+			background: #3583DF	
+			display: flex
+			justify-content: center
+			cursor: pointer
+			margin-bottom: 185px
+			a 
+				font-family: Roboto
+				font-style: normal
+				font-weight: bold
+				font-size: 14px
+				line-height: 16px
+				display: flex
+				align-items: center
+				text-align: center
+				text-transform: uppercase
+				color: #FFFFFF
+			&:hover 
+				color: rgba(255, 255, 255, 1)
+				box-shadow: 0 4px 25px #458FFF
+				background: #458FFF
+		.numbers 
+			display: flex
+			justify-content: space-around
+			-webkit-box-align: center
+			align-items: center
+			width: 100%
+			box-sizing: border-box
+			max-width: 1220px
+			.section 
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				span
+					font-family: Play
+					font-style: normal
+					font-weight: bold
+					font-size: 40px
+					display: flex
+					align-items: center
+					text-align: center
+					text-transform: uppercase
+					color: #fff
+				.label
+					p
+						font-family: Roboto
+						font-style: normal
+						font-weight: 900
+						font-size: 16px
+						display: flex
+						align-items: center
+						text-align: center
+						text-transform: uppercase
+						color: #D3C389
+						background-repeat: no-repeat
+						background-position: center bottom 0px
+						background-size: 100% 1px
+						padding-bottom: 4px
+						background-image: linear-gradient(to right,#4c4c4c00,#6f636eb0,#9e7985ba,#cd918eb0,#f0b08ea1,#f0b08ea1,#f0b08ea1,#f0b08ea1,#cd918eb0,#9e7985,#6f636eb0,#4c4c4c00)
+				
+			
+
+
+.qwe123
+  display: none			
+
+.item__language
+	position: relative
+	label 
+		margin-bottom: 0
+.lang__btn
+	font-family: Roboto
+	font-style: normal
+	font-weight: bold
+	font-size: 16px
+	line-height: 19px
+	color: #D0D8E7
+	cursor: pointer
+	display: inline-block
+	-webkit-transition: background-color 0.1s, color 0.1s
+	svg
+		width: 25px
+		fill: #848484
+		transition: all ease .2s!important
+		&:hover
+			fill: #fff
+	cursor: pointer	
+
+.lang__btn::after
+	content: url(../img/header-arrow-down.svg)
+	position: absolute
+	right: -25px
+	top: 2px
+	// opacity: .6
+	// width: 11px
+	// transition: all ease .2s!important
+.lang__btn:hover:after 
+	// opacity: 1
+
+.qwe:hover 
+  background: #33CC00
+  color: #000
+
+.land__langs 
+	-webkit-transition: height .3s ease
+	height: 0
+	overflow: hidden
+	background-color: #0000007d
+	margin-top: 15px
+	position: absolute
+	z-index: -1
+	left: -20px
+	a 
+		font-family: Roboto
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 19px
+		color: #D0D8E7
+		// padding: 12px 16px
+		text-decoration: none
+		display: block
+		width: 40px
+		height: 30px
+		margin: 20px
+		top: -9px
+		display: flex
+		justify-content: center
+		&:hover 
+			color: #fff
+
+.mm-listitem_selected>.mm-listitem__text
+	background: rgba(255, 255, 255, 0.05) !important
+
+.qwe123:checked + .land__langs
+	height: 90px	
+
+// WHOUS	
+.whous
+	min-width: 1200px
+	min-height: 100vh
+	padding: 100px
+	padding-top: 0
+	display: -ms-flexbox
+	display: flex
+	flex-direction: column
+	-ms-flex-align: center
+	align-items: center
+	-ms-flex-pack: center
+	justify-content: center
+	box-sizing: border-box
+	// background: url(../img/whous.svg)	no-repeat center center
+	// background-size: contain
+	background-color: #0A101F
+	video
+		max-width: 80%
+.title 
+	position: relative
+	margin-top: 130px
+	margin-bottom: 150px
+	h1 
+		font-family: Geometria
+		font-size: 60px
+		line-height: 75px
+		text-align: center
+		color: #FFFFFF
+	h2 
+		font-family: Geometria
+		font-size: 100px
+		line-height: 126px
+		text-align: center
+		text-transform: uppercase
+		color: #0A101F
+		text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff
+		opacity: 0.05
+		position: absolute
+		width: max-content
+		top: -50px
+		left: 50%
+		transform: translateX(-50%)
+// WHOUS END 
+
+// ORDER	
+form 
+	margin-top: 45px
+	// margin-bottom: 128px
+.order 
+	display: flex
+	flex-direction: column
+	-ms-flex-pack: distribute
+	-ms-flex-align: center
+	width: 100%
+	box-sizing: border-box
+	min-width: 1200px
+	min-height: 944px
+	z-index: 100
+	background-color: #0A101F
+	.order__title
+		margin-bottom: 45px
+	.connect__tabs-container
+			
+	.connect__tablinks
+		width: 272px
+		height: 48px
+		left: 824px
+		top: 236px
+		background: rgba(69, 155, 255, 0.15)
+		border: 1px solid #459BFF
+		box-sizing: border-box
+		font-family: Roboto
+		font-style: normal
+		font-weight: bold
+		font-size: 14px
+		line-height: 16px
+		text-transform: uppercase
+		color: #9BB0D0
+		margin-left: 27.5px
+		margin-right: 27.5px
+
+	ul		
+		margin-top: 43px
+		.connect__container-item
+			display: flex
+			position: relative
+			img 
+				height: 4px
+				width: 4px
+				position: absolute
+				top: 10px
+				// left: -12px
+		li 	
+			font-size: 16px
+			margin-bottom: 20px
+			img 
+				margin-right: 10px
+		a 
+			color: #ff9000
+			opacity: 0.9	
+		.connect__item_1, .connect__item_2, .connect__item_3, .connect__item_4
+			margin-left: 22px
+	.connect__tab 
+		overflow: hidden
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		.tab__item
+			display: inline-flex
+			position: relative
+		.tablinks
+			cursor: pointer
+			font-weight: bold
+			font-size: 22px
+			background: unset
+			color: #fff
+			border: none
+			opacity: 0.3
+			letter-spacing: 0.03rem
+			padding: 0px 50px 15px 0px
+			margin-right: 25px
+		.active
+			opacity: 1
+			background: #459BFF
+			color: #fff
+		.connect__tab button 
+			background-color: inherit
+			float: left
+			border: none
+			outline: none
+			cursor: pointer
+			padding: 14px 16px
+			transition: 0.3s	
+	.tabcontent_1
+		display: block
+	.connect__tabcontent
+		display: none
+		border-top: none
+		.tab__list
+			position: relative
+			width: 350px
+			.list__items
+				-webkit-margin: auto
+				-moz-display: flex
+				-moz-margin: auto
+				-moz-align-items: center
+				-moz-font-size: 16px
+				-moz-line-height: 140%
+				-moz-padding-top: 20px !important
+				margin: auto
+				display: flex
+				align-items: center
+				font-size: 16px
+				line-height: 140%
+				padding-top: 20px !important
+				img 
+					height: 48px
+					width: 48px
+				p
+					padding-left: 25px
+	.serv__btn
+		width: 500px
+		margin-left: 10px
+		margin-top: 10px
+	.right__button
+		font-family: myriad
+		font-size: 15px
+		color: #ff9000
+		opacity: 0.9
+	.right__button::after 
+		content: url('../img/header__right-arrow.png')	
+		margin-left: 10px
+
+	.form-1_select, .jq-selectbox__select
+		width: 584px
+		height: 40px
+		background: #1F2A40
+		font-family: Roboto
+		font-style: normal
+		font-weight: 500
+		font-size: 14px
+		line-height: 16px
+		display: flex
+		align-items: center
+		color: #9BB0D0
+		border: none
+		// padding-left: 20px
+		text-shadow: none
+		box-shadow: none
+	.jq-selectbox__trigger
+		top: 3px 
+		border: none	
+	.jq-selectbox:hover 
+		.jq-selectbox__trigger-arrow
+			border-top-color: unset
+	.jq-selectbox.focused 
+		.jq-selectbox__select
+			border: none	
+		.jq-selectbox__trigger-arrow	
+			transform: rotate(180deg)
+	.jq-selectbox__dropdown
+		margin-top: 5px
+		border-radius: 0
+		background: #1F2A40
+		border: none
+	.jq-selectbox 
+		li	
+			font-family: Roboto
+			font-style: normal
+			font-weight: 500
+			font-size: 14px
+			line-height: 16px
+			color: #9bb0d0
+			height: 40px
+			display: flex
+			align-items: center
+			margin: 0
+	.jq-selectbox 
+		padding-left: 15px
+		li.selected
+			background-color: #182335
+	.jq-selectbox 
+		li:hover
+			background-color: #293c58				
+.order 
+	ul
+		margin-top: 0px 	
+
+	// .lebel-1_select
+	// 	position: relative	
+	// .lebel-1_select::before 
+	// 	content: url(../img/form-dropdown-btn.svg)
+	// 	position: absolute
+	// 	right: 15px
+	// 	top: 5px
+	// .option 
+	// 	border-bottom: 1px solid #2F3C55	
+
+	// select 
+	// 	appearance: none
+.form__title
+	padding-bottom: 40px
+	border-bottom: 1px solid #1C263C
+	h1 
+		font-family: Geometria
+		font-size: 20px
+		line-height: 30px
+		color: #FFFFFF
+		margin-bottom: 25px
+		margin-top: 25px
+.form__title_line
+	border: none
+
+
+	
+
+
+.form__title_right
+	padding-bottom: 18.5px
+	margin-bottom: 0	
+	border: none			
+
+.form__input
+	width: 584px
+	height: 48px
+	background: #1F2A40
+	font-family: Roboto
+	font-style: normal
+	font-weight: 500
+	font-size: 14px
+	line-height: 16px
+	display: flex
+	align-items: center
+	color: #9BB0D0
+	border: none
+	// padding-left: 20px
+	text-shadow: none
+	box-shadow: none
+	margin-bottom: 25px
+	input 
+		width: 584px
+		height: 48px
+		background: #0A101F
+		border: 1px solid #1F2A40
+		font-family: Roboto
+		font-style: normal
+		font-weight: 500
+		font-size: 14px
+		line-height: 16px
+		display: flex
+		align-items: center
+		color: #9BB0D0
+		text-shadow: none
+		box-shadow: none
+		padding-left: 16px
+	input::placeholder
+		color: #9BB0D0
+		font-size: 14px
+		opacity: 0.5
+					
+
+.form__border
+ border: none		
+
+.form__container
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.form__wrapp
+	display: flex
+	flex-direction: row
+	justify-content: center
+
+.form__left_side
+	max-width: 580px
+	margin-right: 16px
+
+.form__right_side
+	margin-left: 16px
+	.jq-selectbox__select
+		padding-left: 0
+		padding-right: 25px
+	.jq-selectbox 
+		li.option
+			padding-left: 16px	
+
+.form__rihgt_bottom
+	.form__rihgt_bottom-top
+		display: flex
+		.form__input_short
+			width: 272px
+			height: 48px
+			background: #0A101F
+			// border: 1px solid #1F2A40
+			font-family: Roboto
+			font-style: normal
+			font-weight: 500
+			font-size: 14px
+			line-height: 16px
+			display: flex
+			align-items: center
+			color: #9BB0D0
+			text-shadow: none
+			box-shadow: none
+			margin-right: 20px
+			margin-bottom: 18.5px
+		.form__input_short_margin
+			margin-left: 20px
+			position: relative
+			h3 
+				position: absolute
+				color: #dc3545
+				right: 0
+				top: -18px
+				font-size: 13px
+				opacity: 0.7
+	.form__input_bottom		
+		position: relative
+		h3 
+			position: absolute
+			color: #dc3545
+			right: 0
+			bottom: -25px
+			font-size: 13px
+			opacity: 0.7
+.main-btn
+	width: 296px
+	height: 56px
+	background: #3583DF	
+	display: flex
+	justify-content: center
+	cursor: pointer
+	border: none
+	font-family: Roboto
+	font-style: normal
+	font-weight: bold
+	font-size: 14px
+	line-height: 16px
+	display: flex
+	align-items: center
+	text-align: center
+	text-transform: uppercase
+	color: #FFFFFF
+	&:hover 
+		color: rgba(255, 255, 255, 1)
+		box-shadow: 0 4px 25px #458FFF
+		background: #458FFF	
+
+input:required:valid
+	border: 1px solid #1f2a40 !important
+input:focus:required:invalid
+	border: 1px solid #1f2a40 !important	
+input
+	// background: #0a101f !important	
+
+.form__telegram
+	// margin-right: 10px
+	// padding-left: 20px
+.form__telegram::before
+	content: url('../img/telegram.svg')	
+	margin-right: 8px
+.form__discord::before
+	content: url('../img/discord.svg')	
+	margin-right: 8px
+.form__whatsapp::before
+	content: url('../img/whatsapp.svg')	
+	margin-right: 8px
+.form__teamspeak::before
+	content: url('../img/teamspeak.svg')	
+	margin-right: 8px
+.form__email::before
+	content: url('../img/email.svg')	
+	margin-right: 8px
+.form__phone::before
+	content: url('../img/phone.svg')	
+	margin-right: 8px	
+
+.switch-field 
+	display: flex
+	margin-bottom: 36px
+	overflow: hidden
+
+.switch-field input 
+	position: absolute !important
+	clip: rect(0, 0, 0, 0)
+	height: 1px
+	width: 1px
+	border: 0
+	overflow: hidden
+
+.switch-field label 
+	text-align: center
+	align-items: center
+	border-radius: 0px
+	transition: all 0.1s ease-in-out
+	width: 272px
+	height: 48px
+	background: rgba(69, 155, 255, 0.15)
+	border: 1px solid #459BFF
+	font-family: Roboto
+	font-style: normal
+	font-weight: bold
+	font-size: 14px
+	line-height: 16px
+	display: flex
+	align-items: center
+	text-align: center
+	text-transform: uppercase
+	color: #9BB0D0
+	display: flex
+	justify-content: center
+.label__yes
+	margin-right: 20px
+.label__no
+	margin-left: 20px
+.label__dota:before
+	content: url('../img/dota.svg')	
+	margin-right: 8px 
+	margin-top: 2px
+.label__cs:before
+	content: url('../img/cs.svg')	
+	margin-right: 8px 
+	margin-top: 2px	
+
+
+
+.switch-field label:hover 
+	cursor: pointer
+
+.switch-field input:checked + label 
+	background-color: #459BFF
+	box-shadow: none
+	color: #fff
+
+.switch-field label:first-of-type 
+	border-radius: 0
+
+.switch-field label:last-of-type 
+	border-radius: 0 
+
+
+.slideContainer
+	width: 584px
+	p 
+		margin-top: 20px
+	p, span 
+		font-family: Geometria
+		font-size: 30px
+		line-height: 30px
+		color: #FFFFFF
+
+.rangeslider__handle
+	transition: none
+	-webkit-appearance: none
+	width: 16px
+	height: 16px
+	background: #FFE793
+	border-radius: 50%
+	border: 2px solid #1f2a40
+	cursor: pointer
+
+.rangeslider--horizontal .rangeslider__fill
+	transition: none
+
+.rangeslider__fill
+	background: #FFE793
+
+.rangeslider
+	background: #1F2A40
+
+.rangeslider, .rangeslider__fill
+	border-radius: 0
+	height: 4px
+
+input[type="range"]:focus + .rangeslider .rangeslider__handle
+	box-shadow: none
+
+.rangeslider--horizontal .rangeslider__handle
+	top: -6px
+// ORDER END
+
+// SERVICERS	
+.services
+	position: relative
+	.tablinks-1, .tablinks-2, .tablinks-3
+		margin-left: 15px
+		display: flex
+		align-items: center
+	.questions__wrapp
+		display: none
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		margin-top: 50px
+
+	.question__item
+		width: 848px
+		.drpdw
+			background: #1F2A40
+			margin-bottom: 16px
+			// height: 48px
+
+		.show
+			background: #171f30bd
+			.dropdown-toggle::after
+				transition: all ease 0.3s
+				transform: rotate(180deg)
+		.question__btn
+			width: 100%
+			background: none
+			height: 88px
+			padding-left: 16px
+			padding-right: 16px
+			font-family: Roboto
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			color: #FFFFFF
+			border: none
+			display: flex
+			justify-content: space-between
+			align-items: center
+		.dropdown-toggle::after
+			transition: all ease 0.3s
+			content: none
+			display: unset
+			width: unset
+			height: unset
+			margin-left: unset
+			vertical-align: unset
+			border-top: unset
+			border-right: unset
+			border-bottom: unset
+			border-left: unset
+
+		.dropdown-menu
+			position: relative !important
+			transform: unset !important
+			width: 100%
+			background: #171f30bd !important
+			padding: 16px
+			margin: 0
+			// border-top: 1px solid #1F2A40
+			margin-top: 6px
+			transition: none
+			margin-bottom: 16px
+			ul 
+				margin-left: 30px
+				li 
+					p 
+						font-family: Roboto
+						font-style: normal
+						font-weight: 500
+						font-size: 17px
+						color: #D3C389
+			.list__items
+				display: flex
+				align-items: center			
+			.list__items::before 
+				content: url('../img/line.svg')	
+				margin-bottom: 9px
+
+			.drpdw
+				background: none
+			p
+				padding: 11px
+				font-family: Roboto
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				color: #C3C8D2
+	.services__btn
+		width: 296px
+		height: 56px
+		background: #3583DF	
+		display: flex
+		justify-content: center
+		cursor: pointer
+		margin-top: 72px
+		margin-bottom: 80px
+		a 
+			font-family: Roboto
+			font-style: normal
+			font-weight: bold
+			font-size: 14px
+			line-height: 16px
+			display: flex
+			align-items: center
+			text-align: center
+			text-transform: uppercase
+			color: #FFFFFF
+		&:hover 
+			color: rgba(255, 255, 255, 1)
+			box-shadow: 0 4px 25px #458FFF
+			background: #458FFF	
+	.services__bg
+		// background-color: #0A101F
+		z-index: -1
+		position: absolute
+		top: 0
+		width: 100%
+	.services__title
+		margin: 0
+	.title
+		padding-top: 242px
+		h2 
+			top: 190px
+	.tab 
+		.tablinks	
+			width: 592px
+			height: 88px
+			background: #192135
+			border: none
+			font-family: Geometria
+			font-size: 18px
+			line-height: 30px
+			display: flex
+			align-items: center
+			color: #FFFFFF
+			padding-left: 33px
+			filter: brightness(0.8)
+			margin-right: 16px
+			margin-bottom: 16px
+			position: relative
+		.active
+			border-left: 2px solid #FFE793	
+			filter: none
+		.active::after
+			content: url('../img/rectangle.svg')	
+			position: absolute
+			right: -10px
+			top: 26px		
+	.tablinks-1::before
+		content: url('../img/tab-1.svg')	
+		margin-right: 20px 
+		margin-top: 5px	
+	.tablinks-2::before
+		content: url('../img/tab-2.svg')	
+		margin-right: 20px 
+		margin-top: 5px	
+	.tablinks-3::before
+		content: url('../img/tab-3.svg')	
+		margin-right: 20px 
+		margin-top: 5px	
+	.services__wrapper
+		display: flex
+		flex-direction: row
+		justify-content: center
+		margin-top: 32px
+		margin-bottom: 122px
+		.tabcontent
+			display: none
+			width: 584px
+			height: 296px
+			left: 976px
+			top: 208px
+			background: #192135
+			margin-left: 16px
+			align-items: center
+		.tabcontent_1
+			display: flex
+		.list__items
+			p 
+				font-family: Roboto
+				font-style: normal
+				font-weight: 500
+				font-size: 17px
+				line-height: 24px
+				color: #D3C389
+				position: relative
+				padding: 12px
+			p::before 
+				content: url('../img/line.svg')	
+				position: absolute
+				top: 7px
+				left: -20px
+	.tab__list 
+		margin-left: 88px
+
+	.services__container
+		display: flex
+		flex-direction: column
+		align-items: center
+	.services__btn
+		width: 296px
+		height: 56px
+		background: #3583DF	
+		display: flex
+		justify-content: center
+		cursor: pointer
+		margin-bottom: 30px
+		a 
+			font-family: Roboto
+			font-style: normal
+			font-weight: bold
+			font-size: 14px
+			line-height: 16px
+			display: flex
+			align-items: center
+			text-align: center
+			text-transform: uppercase
+			color: #FFFFFF
+		&:hover 
+			color: rgba(255, 255, 255, 1)
+			box-shadow: 0 4px 25px #458FFF
+			background: #458FFF			
+// SERVICERS END
+
+// PARTNERS		
+.partners
+	// background-color: #0a101f
+	position: relative
+	padding-top: 124px
+	.partners__title
+		margin: 0
+	.partners__wrapp_display
+		display: none	
+	.partners__wrapp
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: 10px
+		.wrapp-1, .wrapp-2
+			display: flex
+		.partners__item
+			height: 232px
+			width: 240px
+			background: #172134
+			border: 1px solid rgba(146, 189, 255, 0.1)
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			margin: 16px	
+			p 
+				font-family: Geometria
+				font-size: 20px
+				line-height: 25px
+				color: #FFFFFF
+				text-align: center
+				margin-top: 15px
+		.partners__item:hover
+			transform: scale(1.05)	
+		.services__btn
+			width: 296px
+			height: 56px
+			background: #3583DF	
+			display: flex
+			justify-content: center
+			cursor: pointer
+			margin-top: 120px
+			margin-bottom: 30px
+			a 
+				font-family: Roboto
+				font-style: normal
+				font-weight: bold
+				font-size: 14px
+				line-height: 16px
+				display: flex
+				align-items: center
+				text-align: center
+				text-transform: uppercase
+				color: #FFFFFF
+			&:hover 
+				color: rgba(255, 255, 255, 1)
+				box-shadow: 0 4px 25px #458FFF
+				background: #458FFF		
+// PARTNERS END 		
+
+// QUESTIONS
+.questions
+	position: relative
+	.services__bg
+		// background-color: #0A101F
+		z-index: -1
+		position: absolute
+		top: -100px
+		width: 100%
+	.questions__title
+	.questions__wrapp
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+
+	.question__item
+		width: 848px
+		.drpdw
+			background: #1F2A40
+			margin-bottom: 16px
+			// height: 48px
+
+		.show
+			background: #171f30bd
+			.dropdown-toggle::after
+				transition: all ease 0.3s
+				transform: rotate(180deg)
+		.question__btn
+			width: 100%
+			background: none
+			padding-top: 11px
+			padding-bottom: 11px
+			padding-left: 16px
+			padding-right: 16px
+			font-family: Roboto
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			color: #FFFFFF
+			border: none
+			display: flex
+			justify-content: space-between
+			align-items: center
+		.dropdown-toggle::after
+			transition: all ease 0.3s
+			content: url('../img/dropdown-arrow.svg') !important	
+			display: unset
+			width: unset
+			height: unset
+			margin-left: unset
+			vertical-align: unset
+			border-top: unset
+			border-right: unset
+			border-bottom: unset
+			border-left: unset
+
+		.dropdown-menu
+			position: relative !important
+			transform: unset !important
+			width: 100%
+			background: #171f30bd !important
+			padding: 16px
+			margin: 0
+			border-top: 1px solid #1F2A40
+			transition: none
+			margin-bottom: 16px
+			.drpdw
+				background: none
+			p
+				padding: 11px
+				font-family: Roboto
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				color: #C3C8D2
+	.services__btn
+		width: 296px
+		height: 56px
+		background: #3583DF	
+		display: flex
+		justify-content: center
+		cursor: pointer
+		margin-top: 72px
+		margin-bottom: 80px
+		a 
+			font-family: Roboto
+			font-style: normal
+			font-weight: bold
+			font-size: 14px
+			line-height: 16px
+			display: flex
+			align-items: center
+			text-align: center
+			text-transform: uppercase
+			color: #FFFFFF
+		&:hover 
+			color: rgba(255, 255, 255, 1)
+			box-shadow: 0 4px 25px #458FFF
+			background: #458FFF				
+// QUESTIONS END
+
+// FOORER
+footer
+	border-top: 1px solid #ffffff1c
+	.footer__wrapper
+		height: 120px
+		display: flex
+		justify-content: space-around
+		align-items: center
+		p 
+			font-family: Roboto
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			color: #636B81
+			margin-top: 8px
+		.footer__right
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			.footer__media
+				a 
+					margin-left: 16px
+
+// FOORER END
+
+
+
+// MAIN WORK
+@import "media" // Always at the end

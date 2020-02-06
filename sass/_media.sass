@@ -1,0 +1,273 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+//Extra large ≥1200px
++media-breakpoint-down(xl)
+		
+//Large ≥992px
++media-breakpoint-down(lg)
+	.jq-selectbox__dropdown
+		width: 100% !important
+	.form__title
+		padding-bottom: 20px
+	.form__title_right
+		width: 100%
+	.form__right_side
+		width: 362px
+	.form__input
+		width: 100%
+	.form-1_select
+		width: 100% !important
+	.jq-selectbox__select
+		width: 100% !important	
+	.form__rihgt_bottom-top	
+		display: flex
+		flex-direction: column
+	.form__input_short
+		width: 362px !important
+		margin-bottom: 27px !important
+	.form__input_short_margin
+		margin-left: 0px !important
+		width: 362px !important
+	.main-btn
+		margin-top: 30px
+
+	.tablinks
+		width: 500px !important
+	.form__rihgt_bottom 
+		.form__input_bottom 
+			h3
+				bottom: -35px
+	.main-btn
+		margin-top: 40px
+	.title 
+		h2
+			font-size: 80px					
+	
+	header
+		padding-left: 50px
+		padding-right: 50px
+		.header__logo
+			img 
+				width: 80%
+		.item 
+			margin-right: 15px !important
+
+	.header__main, .whous, .order
+		min-width: auto
+	.whous 
+		video
+			max-width: 100%	
+	.slideContainer
+		width: 362px
+	.switch-field 
+		label
+			width: 160px
+	.form__left_side
+		display: flex
+		flex-direction: column	
+
+	.services__container
+		display: none !important
+	.services
+		.questions__wrapp
+			display: flex	
+	
+	.partners__wrapp
+		display: none !important
+	.partners__wrapp_display
+		display: flex !important	
+		flex-direction: row !important
+		flex-wrap: wrap  !important
+		justify-content: center !important
+		align-items: center	 !important	
+		.services__btn
+			margin-top: 30px
+
+	.services__bg
+		display: none
+	.services
+		background: url(../img/uslugi.png)	no-repeat center center
+		background-size: cover		
+
+	.questions
+		background: url(../img/questions.png)	no-repeat center center	
+
+	.main__title
+		width: 600px			
+
+//Medium ≥768px
++media-breakpoint-down(md)
+	.title 
+		h1 
+			font-size: 45px
+		h2
+			font-size: 60px
+	.services 
+		.question__item
+			width: 80%
+	.questions 
+		.question__item
+			width: 80%
+	.whous
+		padding: 0
+		padding-left: 5%
+		padding-right: 5%
+		min-height: 80vh
+		.title	
+			margin-top: 0	
+
+	.form__right_side
+		width: 100%
+	.form__wrapp
+		flex-direction: column
+		display: flex	
+	.form__input_short
+		width: 100% !important
+	.form__input 
+		input	
+			width: 100% !important
+	.form__left_side
+		margin-right: 0
+	.form__right_side
+		margin-left: 0
+	.slideContainer
+		width: 500px
+	.form__wrapp
+		width: 500px
+	header
+		display: none
+	.burger__menu
+		display: block										
+//Small ≥576px
++media-breakpoint-down(sm)
+	.numbers
+		flex-wrap: wrap
+		.section
+			width: 50%
+			margin-bottom: 30px
+
+	.title 
+		h2
+			font-size: 45px
+	.main__title
+		width: auto
+	.question__btn 
+		p 
+			text-align: left					
+//Extra Small: >0
++media-breakpoint-down(xs)
+	.main
+		padding-left: 5%
+		padding-right: 5%
+	.header__main 
+		.main 
+			.main__title 
+				h1
+					font-size: 40px
+				h2 
+					font-size: 14px
+				span 
+			.numbers 
+				.section 
+					span
+						font-size: 30px
+					.label
+						p 
+							font-size: 14px	
+
+	.title 
+		margin-bottom: 50px
+		h1
+			font-size: 35px !important
+		h2 
+			width: 200px
+			text-align: center
+			line-height: 70px
+			font-size: 50px
+			top: -80px !important	
+
+	.order
+		.title	
+			h2
+				width: 100%
+
+	.connect__tab
+		flex-direction: column !important
+		.connect__tablinks
+			margin-bottom: 10px			
+
+	.form__wrapp
+		width: 80%
+	.slideContainer
+		width: 100%
+	.switch-field
+		flex-direction: column
+		margin-bottom: 0
+		label	
+			width: 100%
+	.label__no
+		margin-left: 0
+		margin-bottom: 15px
+	.label__yes
+		margin-right: 0
+		margin-bottom: 15px	
+
+	.services
+		.title
+			padding-top: 100px
+			h2 
+				top: 55px !important
+		.question__item	
+			width: 95%	
+			.question__btn
+				font-size: 18px
+			.dropdown-menu 
+				ul 
+					li 
+						p
+							font-size: 14px
+	.title 
+		h2
+			width: 100%
+
+	.questions__title
+		h1 
+			line-height: 55px	
+		h2 
+			top: -30px !important
+	.question__btn 
+		p
+			line-height: 20px
+
+	.questions 
+		.question__item
+			width: 90%																						
+	
+	.footer__wrapper
+		margin-top: 50px
+		margin-bottom: 50px
+		flex-direction: column
+		.footer__right
+			margin-top: 20px
+		.footer__right, .footer__left
+			display: flex !important
+			flex-direction: column !important
+			justify-content: center !important
+			align-items: center !important
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
